@@ -25,4 +25,21 @@
     let person: null; //이렇게안씀
     let person2: string | null; //있을수도 없을수도 있다 의미 나타냄. 보편적으로 undefined를 더씀.
 
+    //unknown
+    let notSure: unknown = 0; //any랑 같음 안좋음.
+    notSure = 'he';
+    notSure = true;
+
+    //any 똥
+    let anything: any = 0;
+    anything = 'hee';
+
+    //void
+    //리턴값이없음.
+
+    //never 리턴할계획이없다 function throwError() , while(true){}
+
+    //object
+    let obj: object; //똥
+
 }
