@@ -40,4 +40,5 @@
         //     console.log(`${state.reason.body}`);
         // }  똥 ->해결: 차별화.ts
     }
+    login('12', '12');
 }
