@@ -1,5 +1,5 @@
 {
-    //*Union Types : OR , 굉장히 많이 씀.
+    //*Union Types : OR , 굉장히 많이 씀. 여러개중 하나.
 
     type Direction = 'left' | 'right' | 'up' | 'down';
     function move(direction: Direction) {
@@ -24,21 +24,19 @@
     }
     type LoginState = SuccessState | FailState;
 
-    function login(id: string, password: string): LoginState {
-        return {
-            response: {
-                body: 'lodded in!'
-            }
-        }
-    }
+    // function login(id: string, password: string): LoginState {
+    //     return {
+    //         response: {
+    //             body: 'lodded in!'
+    //         }
+    //     }
+    // }
     //success - > body
     //fail -> reason
-    function printLoginState(state: LoginState): void {
-        // if('response'in state){
-        //     console.log(`${state.response.body}`);
-        // }else{
-        //     console.log(`${state.reason.body}`);
-        // }  똥 ->해결: 차별화.ts
-    }
-    login('12', '12');
+    // function printLoginState(state: LoginState): void {
+    // if('response'in state){
+    //     console.log(`${state.response.body}`);
+    // }else{
+    //     console.log(`${state.reason.body}`);
+    // }  똥 ->해결: 차별화.ts
 }
