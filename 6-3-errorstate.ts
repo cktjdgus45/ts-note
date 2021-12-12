@@ -1,9 +1,17 @@
 {
-    class TimeoutError extends Error { }
-    class OfflineError extends Error { }
+    //세부적인 error 다루기 any가 아닌 - ERROR STATE;
+    type NetworkErrorState = {
+        result: 'fail';
+        reason: 'offline' | 'down' | 'timeout';  //예상가능한 상태를 코딩.
+    }
+
+    type SuccessState = {
+        result: 'success';
+    }
+    type ResultState = SuccessState | NetworkErrorState;
     class NetworkClient {
-        tryConnect(): void {
-            throw new OfflineError('no network');
+        tryConnect(): ResultState {
+            //
         }
     }
 
